@@ -14,9 +14,123 @@
 .main-content{
     border: 1px solid gray;
 }
-.col{
+/* .col{
     background-color: blueviolet;
     border: 1px solid red;
     width: 100%;
     height: 100px;
+} */
+@media(min-width:992px){
+    nav .brand-logo{
+        right: unset;
+        left:0.5rem;
+    }
+}
+#mobile-demo{
+
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(#6a55b6,#5c959bd7,#0d86968f),
+    url('../images/Staten_Island_Ferry_terminal.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+#mobile-demo li{
+    width: 100%;
+}
+#mobile-demo li a{
+    text-align: center;
+    color: white;
+}
+nav .sidenav-trigger{
+    float: right;
+}
+.nav-wrapper ul{
+    display: flex;
+}
+.tab-content{
+     /* width: 100% !important; */
+    height: calc(100vh - 64px) !important; 
+}
+.fixed-action-btn{
+    right: unset;
+}
+.tab-content{
+    background: rgb(0,188,212);
+    background: linear-gradient(180deg, rgba(0,188,212,1) 0%, rgba(0,96,100,1) 25%, rgba(255,255,255,1) 25%); 
+}
+.progressbar_grid{
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+.p1-x{
+    padding: 1rem;
+}
+.form-content{
+    background: rgba(255,255,255,0.7);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px black;
+
+}
+.table-content{
+    background: rgba(255,255,255,0.7);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px black;
+    overflow: auto;
+    max-height: calc(100vh - 1.1rem - 68px);
+}
+.table-content table.highlight > tbody > tr:hover{
+    background-color: #6a55b63a;
+}
+.table-content thead{
+    border-radius: 10px;
+    color: white;
+}
+
+@media(min-width:992px){
+    .table-content td{
+        font-size: 12px;
+    }
+    .table-content thead{
+        font-size: 12px;
+    }
+}
+@media(max-width:993px){
+    .table-content  th,.table-content td{
+        padding:0.5rem;
+    }
+}
+
+.cost_content{
+    background: rgba(255,255,255,0.7);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px black;
+}
+input{
+    font-family: 'BYekan';
+}
+
+.payam_content{
+    background: rgba(255,255,255,0.7);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 0 5px black;
+    overflow: auto;
+    max-height: calc(100vh - 1.1rem - 68px);
+}
+.payam_content .collection .collection-item.active{
+    background-color: white !important;
+    color: unset !important;
 }

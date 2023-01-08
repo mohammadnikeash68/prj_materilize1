@@ -1,26 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/materialize-rtl.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/materialize.min.css" />
+    <link rel="stylesheet" href="assets/css/materialize-rtl.css" />
+    <link
+      rel="stylesheet"
+      href="assets/fonts/fontawesome-free-6.2.1-web/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>پروژه متریال سی اس اس</title>
-</head>
-<body dir="rtl">
-    <div class="container main-content">
-        <div class="row">
-            <div class="col s12 m4 l3 xl2 purple darken-1 valign-wrapper center-align hide-on-med-and-down">سلام دوستان</div>
-            <div class="col s12 m4 l3 xl2 red darken-2 center-align valign-wrapper hoverable">سلام دوستان</div>
-            <div class="col s12 m4 l3 xl2 blue darken-3">سلام دوستان</div>
+  </head>
+  <body dir="rtl">
+    <!-- start header navbar --------------------- -->
+    <div class="navbar-fixed">
+      <nav class="cyan lighten-2">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">
+            <img
+              src="assets/images/icons8-city-buildings-100.png"
+              width="50px"
+            />
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="fa-solid fa-bars fa-2x text-red"></i
+          ></a>
+          <ul class="right hide-on-med-and-down navbar_content_ul">
+            <li class="tab"><a href="#test1">داشبورد</a></li>
+            <li class="tab"><a href="#test2">ثبت همسایگان</a></li>
+            <li class="tab "><a href="#test3">مدیریت همسایگان</a></li>
+            <li class="tab "><a href="#test4">ثبت هزینه ها</a></li>
+            <li class="tab active"><a href="#test5">پیام ها</a></li>
+          </ul>
         </div>
-        
+      </nav>
     </div>
-<script src="assets/js/materialize.min.js"></script>
-<script src="assets/fonts/fontawesome-free-6.2.1-web/js/all.min.js"></script>
-<script src="assets/js/app.js"></script>    
-</body>
+
+    <ul class="sidenav navbar_content_ul" id="mobile-demo">
+      <li class="tab"><a class="menu_item_mobile" href="#test1">داشبورد</a></li>
+      <li class="tab">
+        <a class="menu_item_mobile " href="#test2">ثبت همسایگان</a>
+      </li>
+      <li class="tab">
+        <a class="menu_item_mobile " href="#test3">مدیریت همسایگان</a>
+      </li>
+      <li class="tab">
+        <a class="menu_item_mobile " href="#test4">ثبت هزینه ها</a>
+      </li>
+      <li class="tab"><a class="menu_item_mobile active" href="#test5">پیام ها</a></li>
+    </ul>
+    <!------ start dashboard -------------------------->
+    <div id="test1" class="tab-content red">
+      <div class="row">
+        <div class="col s12 m6 l4 progressbar_grid">
+          <span class="white-text">
+            <svg
+              viewBox="0 0 100 100"
+              style="filter: drop-shadow(0 0 5px black)"
+            >
+              <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.8)" />
+              <path
+                id="payProgressPath"
+                fill="none"
+                stroke-linecap="round"
+                stroke-width="6"
+                stroke="#006064"
+                stroke-dasharray="126.5,126.5"
+                d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"
+              />
+              <text
+                id="payProgressText"
+                x="50"
+                y="35"
+                fill="#006064"
+                text-anchor="middle"
+                dy="7"
+                font-size="23"
+              >
+                50%
+              </text>
+              <text
+                x="50"
+                y="55"
+                fill="#006064"
+                text-anchor="middle"
+                dy="7"
+                font-size="12"
+              >
+                پرداخت ها
+              </text>
+            </svg>
+          </span>
+        </div>
+        <div class="col s12 m6 l4 progressbar_grid">
+          <span class="white-text">
+            <svg
+              viewBox="0 0 100 100"
+              style="filter: drop-shadow(0 0 5px black)"
+            >
+              <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.8)" />
+              <path
+                id="freeProgressPath"
+                fill="none"
+                stroke-linecap="round"
+                stroke-width="6"
+                stroke="#006064"
+                stroke-dasharray="126.5,126.5"
+                d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"
+              />
+              <text
+                id="freeProgressText"
+                x="50"
+                y="35"
+                fill="#006064"
+                text-anchor="middle"
+                dy="7"
+                font-size="23"
+              >
+                50%
+              </text>
+              <text
+                x="50"
+                y="55"
+                fill="#006064"
+                text-anchor="middle"
+                dy="7"
+                font-size="12"
+              >
+                پرداخت ها
+              </text>
+            </svg>
+          </span>
+        </div>
+        <div class="col s12 m6 l4 progressbar_grid">
+          <span class="white-text">
+            <svg
+              viewBox="0 0 100 100"
+              style="filter: drop-shadow(0 0 5px black)"
+            >
+              <circle cx="50" cy="50" r="45" fill="rgba(255,255,255,0.8)" />
+              <path
+                id="costProgressPath"
+                fill="none"
+                stroke-linecap="round"
+                stroke-width="6"
+                stroke="#006064"
+                stroke-dasharray="126.5,126.5"
+                d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"
+              />
+              <text
+                id="costProgressText"
+                x="50"
+                y="35"
+                fill="#006064"
+                text-anchor="middle"
+                dy="7"
+                font-size="23"
+              >
+                50%
+              </text>
+              <text
+                x="50"
+                y="55"
+                fill="#006064"
+                text-anchor="middle"
+                dy="7"
+                font-size="12"
+              >
+                پرداخت ها
+              </text>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!------ end dashboard -------------------------->
+    <!-- start register neiboars -->
+    <div id="test2" class="tab-content ">
+      <div class="row p1-x">
+        <div class="col m2 l3"></div>
+        <form class="form-content col s12 m8 l6">
+          <h5 class="center-align cyan-text text-darken-4">ثبت همسایگان</h5>
+          <div class="row">
+            <div class="col s12 input-field">
+              <input id="name" type="text" class="validate" />
+              <label class="teal-text text-darken-4" for="name">نام و نام خانوادگی</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6 input-field">
+              <input id="count" type="number" class="validate" />
+              <label class="teal-text text-darken-4" for="count">تعداد</label>
+            </div>
+            <div class="col s6 input-field">
+              <input id="phone" type="text" class="validate" />
+              <label class="teal-text text-darken-4" for="phone">تماس</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6 input-field">
+              <select id="floor">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <label class="teal-text text-darken-4" for="floor">طبقه</label>
+            </div>
+            <div class="col s6 input-field">
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <label class="teal-text text-darken-4" for="phone">واحد</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s4 ">
+              <label>
+                <input id="group" name="group" type="radio" />
+                <span class="teal-text text-darken-4" for="group">مالک</span>
+              </label>
+            </div>
+            <div class="col s4">
+              <label>
+                <input id="group" name="group" type="radio" />
+                <span class="teal-text text-darken-4" for="group">ساکن</span>
+              </label>
+            </div>
+            <div class="col s4">
+              <label>
+                <input id="mostajer" type="checkbox" />
+                <span class="teal-text text-darken-4" for="mostajer">مستاجر</span>
+              </label>
+             
+            </div>
+          
+          </div>
+          <div class="row">
+            <div class="col s4 input-field">
+              <select id="day">
+                <option value="1">شنبه</option>
+                <option value="2">یکشنبه</option>
+                <option value="3">دوشنبه</option>
+                <option value="4">سه شنبه</option>
+                <option value="5">چهارشنبه</option>
+                <option value="6">پنجشنبه</option>
+                <option value="7">جمعه</option>
+              </select>
+              <label class="teal-text text-darken-4" for="day">روز</label>
+            </div>
+            <div class="col s4 input-field">
+              <select id="mounth">
+                
+                <option value="1">فروردین</option>
+                <option value="2">اردیبهشت</option>
+                <option value="3">خرداد</option>
+                <option value="4">تیر</option>
+                <option value="5">مرداد</option>
+                <option value="6">شهریور</option>
+                <option value="7">مهر</option>
+                <option value="8">آبان</option>
+                <option value="9">آذر</option>
+                <option value="10">دی</option>
+                <option value="11">بهمن</option>
+                <option value="12">اسفند</option>
+        
+              </select>
+              <label class="teal-text text-darken-4" for="mounth">ماه</label>
+            </div>
+            <div class="col s4 input-field">
+              <select>
+                <option value="1">1390</option>
+                <option value="2">1391</option>
+                <option value="3">1392</option>
+                <option value="4">1393</option>
+                <option value="5">1394</option>
+              </select>
+              <label class="teal-text text-darken-4">سال</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 center-align">
+              <a class="waves-effect waves-light btn">ثبت</a>
+            </div>
+          </div>
+        </form>
+        <div class="col m2 l3"></div>
+      </div>
+    </div>
+    <!-- end register neiboars -->
+    <!-- start manage neiboars -->
+    <div id="test3" class="tab-content  ">
+      <div class="row p1-x">
+        <div class="col s12">
+          <div class="table-content">
+            <h5 class="cyan-text text-darken-4 center-align p1-x">مدیریت همسایگان</h5>
+            <table class="responsive-table highlight centered striped rounded">
+              <thead class="cyan darken-2 ">
+                <tr >
+                <th>نام و نام خانوادگی </th>
+                <th>تماس</th>
+                <th>تعداد</th>
+                <th>طبقه</th>
+                <th>واحد</th>
+                <th>وضعیت سکونت</th>
+                <th>تاریخ سکونت</th>
+                <th>عملیات</th>
+                </tr>
+              
+              </thead>
+              <tbody>
+                <tr>
+                  <td>محمد نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                  
+                </td>
+                </tr>
+                <tr>
+                  <td>رضا نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <tr>
+                  <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+                <td>حسن نیک عیش</td>
+                <td>09924714773</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>مالک</td>
+                <td>1392/02/01</td>
+                <td>
+                  <a href="#"><i class="fas fa-pencil"></i></a>
+                  <a href="#"><i class="fas fa-circle-minus"></i></a>
+                </td>
+                </tr>
+              </tr>
+              <td>حسن نیک عیش</td>
+              <td>09924714773</td>
+              <td>2</td>
+              <td>2</td>
+              <td>1</td>
+              <td>مالک</td>
+              <td>1392/02/01</td>
+              <td>
+                <a href="#"><i class="fas fa-pencil"></i></a>
+                <a href="#"><i class="fas fa-circle-minus"></i></a>
+              </td>
+              </tr>
+            </tr>
+            <td>حسن نیک عیش</td>
+            <td>09924714773</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>مالک</td>
+            <td>1392/02/01</td>
+            <td>
+              <a href="#"><i class="fas fa-pencil"></i></a>
+              <a href="#"><i class="fas fa-circle-minus"></i></a>
+            </td>
+            </tr>
+          </tr>
+          <td>حسن نیک عیش</td>
+          <td>09924714773</td>
+          <td>2</td>
+          <td>2</td>
+          <td>1</td>
+          <td>مالک</td>
+          <td>1392/02/01</td>
+          <td>
+            <a href="#"><i class="fas fa-pencil"></i></a>
+            <a href="#"><i class="fas fa-circle-minus"></i></a>
+          </td>
+          </tr>
+        </tr>
+        <td>حسن نیک عیش</td>
+        <td>09924714773</td>
+        <td>2</td>
+        <td>2</td>
+        <td>1</td>
+        <td>مالک</td>
+        <td>1392/02/01</td>
+        <td>
+          <a href="#"><i class="fas fa-pencil"></i></a>
+          <a href="#"><i class="fas fa-circle-minus"></i></a>
+        </td>
+        </tr>
+      </tr>
+      <td>حسن نیک عیش</td>
+      <td>09924714773</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1</td>
+      <td>مالک</td>
+      <td>1392/02/01</td>
+      <td>
+        <a href="#"><i class="fas fa-pencil"></i></a>
+        <a href="#"><i class="fas fa-circle-minus"></i></a>
+      </td>
+      </tr>
+    </tr>
+    <td>حسن نیک عیش</td>
+    <td>09924714773</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1</td>
+    <td>مالک</td>
+    <td>1392/02/01</td>
+    <td>
+      <a href="#"><i class="fas fa-pencil"></i></a>
+      <a href="#"><i class="fas fa-circle-minus"></i></a>
+    </td>
+    </tr>
+  </tr>
+  <td>حسن نیک عیش</td>
+  <td>09924714773</td>
+  <td>2</td>
+  <td>2</td>
+  <td>1</td>
+  <td>مالک</td>
+  <td>1392/02/01</td>
+  <td>
+    <a href="#"><i class="fas fa-pencil"></i></a>
+    <a href="#"><i class="fas fa-circle-minus"></i></a>
+  </td>
+  </tr>
+  
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end manage neiboars -->
+    <!-- start register cost -->
+    <div id="test4" class="tab-content ">
+      <div class="row p1-x">
+        <div class="col s12 m2 l3"></div>
+        <div class="col s12 m8 l6">
+          <div class="cost_content">
+            <h4 class="cyan-text text-darken-4 center-align">ثبت هزینه ها</h4>
+            <div class="row">
+              <div class="col s12">
+                <select>
+                  <option value="">برای همه همسایه ها</option>
+                  <option value="">برای مالکین </option>
+                  <option value="">برای مستاجرین</option>
+                  <option value="">واحد1</option>
+                  <option value="">2واحد</option>
+                  <option value="">3واحد</option>
+                  <option value="">4واحد</option>
+                  <option value="">5واحد</option>
+                  <option value="">6واحد</option>
+                  <option value="">...</option>
+                </select>
+              </div> 
+            </div>
+            <div class="row">
+              <div class="col s12 input-field">
+                <input type="text" class="autocomplete" id="desc"/>
+                <label class="cyan-text text-darken-4"  for="desc">بابت</label> 
+              </div>
+              <div class="col s12 input-field">
+                <input type="number" id="amount"/>
+                <label class="cyan-text text-darken-4" for="amount">مبلغ</label> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <label>
+                  <input type="radio" name="group" id="optional"/>
+                  <span for="optional">اختیاری</span>
+                </label>
+              </div>
+              <div class="col s6">
+                <label>
+                  <input type="radio" name="group" id="required"/>
+                  <span for="required">الزامی</span>
+                </label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s4 input-field">
+                <select id="day">
+                  <option value="1">شنبه</option>
+                  <option value="2">یکشنبه</option>
+                  <option value="3">دوشنبه</option>
+                  <option value="4">سه شنبه</option>
+                  <option value="5">چهارشنبه</option>
+                  <option value="6">پنجشنبه</option>
+                  <option value="7">جمعه</option>
+                </select>
+                <label class="teal-text text-darken-4" for="day">روز</label>
+              </div>
+              <div class="col s4 input-field">
+                <select id="mounth">
+                  
+                  <option value="1">فروردین</option>
+                  <option value="2">اردیبهشت</option>
+                  <option value="3">خرداد</option>
+                  <option value="4">تیر</option>
+                  <option value="5">مرداد</option>
+                  <option value="6">شهریور</option>
+                  <option value="7">مهر</option>
+                  <option value="8">آبان</option>
+                  <option value="9">آذر</option>
+                  <option value="10">دی</option>
+                  <option value="11">بهمن</option>
+                  <option value="12">اسفند</option>
+          
+                </select>
+                <label class="teal-text text-darken-4" for="mounth">ماه</label>
+              </div>
+              <div class="col s4 input-field">
+                <select>
+                  <option value="1">1390</option>
+                  <option value="2">1391</option>
+                  <option value="3">1392</option>
+                  <option value="4">1393</option>
+                  <option value="5">1394</option>
+                </select>
+                <label class="teal-text text-darken-4">سال</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center-align">
+                
+                <a href="#" class="btn waves-effect cyan">ثبت</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col s12 m2 l3"></div>
+      </div>
+    </div>
+    <!-- end register cost -->
+    <!-- start payam -->
+    <div id="test5" class="tab-content green active">
+      <div class="row p1-x">
+        <div class="col s12 m2 l3"></div>
+        <div class="col s12 m8 l6">
+          <div class="payam_content">
+            <h4 class="cyan-text text-darken-4 center-align">پیام ها</h4>
+            <ul class="collapsible collection">
+              <li  class=" col s12  collection-item avatar waves-effect waves-teal  ">
+                <div class="collapsible-header">
+                  <img src="assets/images/avatar.png" class="circle">
+                  <p style="line-height: 30px;">
+                    عنوان پیام 1
+                    <br/>
+                    1401/10/20<span>توسط : <a href="#">محمد نیک عیش</a></span>
+                  </p>  
+                </div>
+                <div class="collapsible-body"><span style="line-height: 30px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span></div>
+              </li>
+              <li  class=" col s12  collection-item avatar waves-effect waves-teal  ">
+                <div class="collapsible-header">
+                  <img src="assets/images/avatar.png" class="circle">
+                  <p style="line-height: 30px;">
+                    عنوان پیام 1
+                    <br/>
+                    1401/10/20<span>توسط : <a href="#">محمد نیک عیش</a></span>
+                  </p>  
+                </div>
+                <div class="collapsible-body"><span style="line-height: 30px;">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</span></div>
+              </li>
+            
+         
+         
+            
+              
+           
+              </ul>
+
+          </div>
+        </div>
+        <div class="col s12 m2 l3"></div>
+      </div> 
+      
+      
+      
+      
+    </div>
+      <!-- end payam -->
+
+    <!-- end  header navbar --------------------- -->
+    <!-- start button toolbar bottom -->
+    <div class="fixed-action-btn toolbar hide-on-large-only">
+      <a class="btn-floating btn-large cyan darken-3">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li>
+          <a class="btn-floating quick_access_item"
+            ><i class="material-icons">insert_chart</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating quick_access_item"
+            ><i class="material-icons">format_quote</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating quick_access_item"
+            ><i class="material-icons">publish</i></a
+          >
+        </li>
+        <li>
+          <a class="btn-floating quick_access_item"
+            ><i class="material-icons">attach_file</i></a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- end button toolbar bottom -->
+
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/fonts/fontawesome-free-6.2.1-web/js/all.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
 </html>
